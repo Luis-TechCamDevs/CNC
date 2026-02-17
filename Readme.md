@@ -60,6 +60,26 @@ M30                 ; Program end
 
 ---
 
+## 🔲 Visualización del corte
+
+Aquí un **dibujito ASCII** que representa el cuadrado y el agujero central:
+
+```
++------------------+      <-- Cuadrado 50x50 mm
+|                  |
+|        •         |      <-- Agujero en el centro
+|                  |
++------------------+
+```
+
+- `+` → Esquinas del cuadrado  
+- `|` y `-` → Lados del cuadrado  
+- `•` → Agujero central de la perforación
+
+Esto ayuda a visualizar rápidamente el **recorrido de la herramienta**.
+
+---
+
 ## ⚙ Explicación
 
 - Este programa genera un **corte cuadrado** de 50x50 mm.  
@@ -71,7 +91,7 @@ M30                 ; Program end
 
 ## 💡 Tip de optimización
 
-- Con **G90 (absoluto)**, no necesitas repetir la coordenada que no cambia.  
+- Con **G90 (absoluto)**, solo necesitas indicar la coordenada que cambia en cada movimiento si el otro eje permanece constante.  
 - Para patrones repetitivos, puedes usar **G91 (relativo)** y simplificar cálculos de trayectoria.
 
 ---
@@ -111,4 +131,3 @@ Proyecto creado como ejemplo educativo para aprender generación y optimización
 ## 📄 Licencia
 
 MIT License — libre uso educativo y comercial.
-
